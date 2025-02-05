@@ -1,5 +1,9 @@
 #ESTIMATION OF THE EFFECTS OF CLIMATE CHANGE BY ANNUAL SURFACE TEMPERATURE
 
+# Library Preparation
+!pip install pandas matplotlib seaborn scikit-learn xgboost
+!pip install missingno
+
 # Importing the necessary libraries
 import numpy as np
 import pandas as pd
@@ -36,7 +40,7 @@ corr_matrix = numeric_df.corr()
 
 # Heeat map
 plt.figure(figsize=(12, 6))
-sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+sns.heatmap(corr_matrix, annot=False, cmap='coolwarm')
 plt.show()
 
 # List column names by year
